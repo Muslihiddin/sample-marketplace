@@ -52,6 +52,7 @@ const emit = defineEmits(["toggleCatalogState", 'openLoginDialog']);
       <UButton
         variant="ghost"
         class="group"
+        to="likes"
       >
         <p class="text-brand-txt group-hover:text-primary">
           Likes
@@ -61,25 +62,25 @@ const emit = defineEmits(["toggleCatalogState", 'openLoginDialog']);
           class="text-brand-txt w-6 h-6 group-hover:text-primary"
         />
       </UButton>
-      <NuxtLink to="cart">
-        <UButton
-          variant="ghost"
-          class="group"
+      
+      <UButton
+        variant="ghost"
+        class="group"
+        to="cart"
+      >
+        <p class="text-brand-txt group-hover:text-primary">
+          Cart
+        </p>
+        <UChip
+          text="2"
+          size="2xl"
         >
-          <p class="text-brand-txt group-hover:text-primary">
-            Cart
-          </p>
-          <UChip
-            text="2"
-            size="2xl"
-          >
-            <UIcon
-              name="i-heroicons-shopping-bag"
-              class="text-brand-txt w-6 h-6 group-hover:text-primary"
-            />
-          </UChip>
-        </UButton>
-      </NuxtLink>
+          <UIcon
+            name="i-heroicons-shopping-bag"
+            class="text-brand-txt w-6 h-6 group-hover:text-primary"
+          />
+        </UChip>
+      </UButton>
     </div>
   </div>
 </template>

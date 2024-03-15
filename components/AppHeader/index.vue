@@ -29,10 +29,12 @@ const handleToggle = (v: boolean) => (isCatalogOpen.value = v);
               Make purchases without any hustle
             </p>
           </div>
-          <div class="border rounded-full cursor-pointer p-1 flex items-center justify-center">
+          <div
+            class="border rounded-full cursor-pointer p-1 flex items-center justify-center "
+            @click="isLoginOpen = false"
+          >
             <UIcon
               name="i-heroicons-x-mark"
-              @click="isLoginOpen = false"
             />
           </div>
         </div>
@@ -43,7 +45,8 @@ const handleToggle = (v: boolean) => (isCatalogOpen.value = v);
         />
         <UButton
           size="xl"
-          class="flex justify-center mt-4"
+          class="mt-4"
+          block
         >
           Sign in
         </UButton>

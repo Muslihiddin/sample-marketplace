@@ -106,7 +106,10 @@ const liked = ref(false);
             <p class="flex items-center justify-between">
               Total: <span class="text-lg font-medium">19 000 000 so'm</span>
             </p>
-            <UButton class="flex items-center justify-center p-3">
+            <UButton
+              size="xl"
+              block
+            >
               Proceed with payment
             </UButton>
           </div>

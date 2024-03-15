@@ -31,12 +31,13 @@ const items = [
           View all
         </NuxtLink>
       </div>
-      <div class="mt-4 grid grid-cols-4 gap-x-4 gap-y-3">
+      <div class="mt-4 mb-10 grid grid-cols-4 gap-x-4 gap-y-3">
         <ProductCard
           v-for="item in 20"
           :key="item"
         />
       </div>
+      <SimpleBanner />
     </UContainer>
   </main>
 </template>

@@ -8,21 +8,28 @@ const items = [
 </script>
 
 <template>
-  <NuxtLink to="product">
-    <UCard class="min-w-52 max-w-80 group">
-      <UCarousel
-        v-slot="{ item }"
-        :items="items"
-        :ui="{ item: 'basis-full' }"
-        indicators
-      >
+  <UCard class="relative min-w-52 max-w-80 group">
+    <UButton
+      variant="soft"
+      class="absolute right-3 top-3 z-10"  
+      icon="i-heroicons-heart"
+    />
+    <UCarousel
+      v-slot="{ item }"
+      :items="items"
+      :ui="{ item: 'basis-full' }"
+      indicators
+    >
+      <NuxtLink to="product">
         <NuxtImg
           :src="item"
           draggable="false"
           class="group-hover:scale-105 cursor-pointer duration-200"
         />
-      </UCarousel>
-      <template #footer>
+      </NuxtLink>
+    </UCarousel>
+    <template #footer>
+      <NuxtLink to="product">
         <div class="flex flex-col gap-6">
           <p class="line-clamp-2 text-sm">
             Apple iPhone X 64GB Silver Fully Unlocked
@@ -46,7 +53,7 @@ const items = [
             </div>
           </div>
         </div>
-      </template>
-    </UCard>
-  </NuxtLink>
+      </NuxtLink>
+    </template>
+  </UCard>
 </template>
