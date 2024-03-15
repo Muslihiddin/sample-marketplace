@@ -8,7 +8,7 @@
         v-for="item in 4"
         :key="item"
       >
-        <ProductCard />
+        <ProductCard liked />
       </li>
     </ul>
   </UContainer>

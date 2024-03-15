@@ -1,4 +1,7 @@
 <script setup lang="ts">
+defineProps<{
+  liked?: boolean
+}>()
 const items = [
   "/images/products/iphone_x_01.jpg",
   "/images/products/iphone_x_02.jpg",
@@ -10,6 +13,13 @@ const items = [
 <template>
   <UCard class="relative min-w-52 max-w-80 group">
     <UButton
+      v-if="liked"
+      variant="soft"
+      class="absolute right-3 top-3 z-10"  
+      icon="i-heroicons-heart-solid"
+    />
+    <UButton
+      v-else
       variant="soft"
       class="absolute right-3 top-3 z-10"  
       icon="i-heroicons-heart"
